@@ -1,0 +1,39 @@
+{
+  "name": "sistema-ats",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "npm run dev --workspace @sistema-ats/frontend",
+    "dev:api": "npm run dev --workspace @sistema-ats/backend",
+    "build": "npm run build --workspace @sistema-ats/backend && npm run build --workspace @sistema-ats/frontend",
+    "start": "npm run start --workspace @sistema-ats/frontend",
+    "api": "npm run start --workspace @sistema-ats/backend",
+    "worker": "npm run worker --workspace @sistema-ats/backend",
+    "typecheck": "npm run typecheck --workspace @sistema-ats/backend && npm run typecheck --workspace @sistema-ats/frontend",
+    "test": "npm run test:backend && npm run test:frontend",
+    "test:backend": "npm test --workspace @sistema-ats/backend",
+    "test:frontend": "npm test --workspace @sistema-ats/frontend",
+    "test:spec": "node scripts/spec-tests.mjs",
+    "test:integration": "npm run test:integration --workspace @sistema-ats/backend",
+    "db:generate": "npm run db:generate --workspace @sistema-ats/backend",
+    "db:migrate": "npm run db:migrate --workspace @sistema-ats/backend",
+    "db:migrate:dev": "npm run db:migrate:dev --workspace @sistema-ats/backend",
+    "format": "prettier --write frontend/src frontend/*.json frontend/*.ts docs/*.md *.json *.yaml README.md && npm run format --workspace @sistema-ats/backend",
+    "format:check": "prettier --check frontend/src frontend/*.json frontend/*.ts docs/*.md *.json *.yaml README.md && npm run format:check --workspace @sistema-ats/backend",
+    "lint:backend": "npm run lint --workspace @sistema-ats/backend",
+    "check:backend": "npm run check --workspace @sistema-ats/backend"
+  },
+  "devDependencies": {
+    "prettier": "3.6.2",
+    "prisma": "7.10.0",
+    "typescript": "5.9.3"
+  }
+}

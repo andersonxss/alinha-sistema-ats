@@ -1,0 +1,81 @@
+
+> sistema-ats@0.1.0 test:backend
+> npm test --workspace @sistema-ats/backend
+
+
+> test
+> tsx --test tests/tests/*.test.ts
+
+✔ explica erro de crédito/limite do provedor em vez de mascarar como timeout (4.9288ms)
+✔ explica chave recusada e remove credencial que apareça no detalhe (0.7836ms)
+✔ diferencia modelo ou endpoint inválido e incompatibilidade de formato (0.4721ms)
+✔ autenticação consulta a sessão com dados simples e retorna o usuário (2.1377ms)
+✔ sessão ausente ou inválida gera erro da aplicação (0.7971ms)
+✔ adaptador Better Auth preserva cabeçalhos e expõe apenas a identidade necessária (31.9943ms)
+✔ falha do provedor não é transformada em sessão inválida (2.4445ms)
+✔ GET e HEAD consultam sessão sem Origin e ausência vira 401 (0.9309ms)
+✔ mutações verificam origem antes de consultar a sessão (2.2342ms)
+✔ rota de conta usa autenticação injetada e mantém confirmação e respostas HTTP (11.4883ms)
+✔ cria análise com snapshot revisado e dados da vaga (1.9126ms)
+✔ recusa currículo de outro usuário ou inexistente sem persistir (1.2809ms)
+✔ exige revisão completa antes de criar a tarefa (1.0556ms)
+✔ revisão persiste texto, nome e seções do mesmo conteúdo, mantendo o proprietário (3.3799ms)
+✔ falha ao preparar seções não inicia a persistência da revisão (1.0204ms)
+✔ recurso ausente ou fora do escopo mantém resultado de ausência nas operações (0.508ms)
+✔ consulta conserva os dados retornados e exclusão envia o escopo de proprietário (0.8808ms)
+✔ aprovação encaminha a revisão esperada sem antecipar incremento ou repetir conflito (0.5399ms)
+✔ falhas de persistência são propagadas sem retries ou sucesso falso (0.7183ms)
+✔ erro RESUME_NOT_FOUND retorna status e contrato público corretos (37.6439ms)
+✔ erro RESUME_NEEDS_REVIEW retorna status e contrato público corretos (1.0343ms)
+✔ erro ANALYSIS_NOT_FOUND retorna status e contrato público corretos (0.7453ms)
+✔ erro COMPLETED_ANALYSIS_NOT_FOUND retorna status e contrato público corretos (0.8677ms)
+✔ erro ADAPTATION_ALREADY_QUEUED retorna status e contrato público corretos (2.2636ms)
+✔ erro AI_NOT_CONFIGURED retorna status e contrato público corretos (0.7904ms)
+✔ erro EXPORT_NOT_FOUND retorna status e contrato público corretos (0.6976ms)
+✔ erro ORIGINAL_RESUME_FILE_NOT_FOUND retorna status e contrato público corretos (0.6591ms)
+✔ erro VERSION_CONFLICT retorna status e contrato público corretos (0.9118ms)
+✔ erro INVALID_RESUME_FILE retorna status e contrato público corretos (0.8364ms)
+✔ erro ACCOUNT_CONFIRMATION_MISMATCH retorna status e contrato público corretos (0.5597ms)
+✔ erro UNAUTHENTICATED retorna status e contrato público corretos (0.496ms)
+✔ erro VACANCY_IMPORT_FAILED retorna status e contrato público corretos (0.3798ms)
+✔ validação de entrada expõe código estável e caminho do campo (7.3221ms)
+✔ multipart válido preserva o arquivo dentro do limite (44.8362ms)
+✔ upload inválido usa status de cliente e o envelope de erro existente (9.4405ms)
+✔ JSON malformado e acima do limite mantêm 400 e 413 (2.4205ms)
+✔ routers preservam métodos, caminhos, query, parâmetros e corpo (110.3295ms)
+✔ autenticação recebe corpo bruto e URL original com prefixo /api (10.698ms)
+✔ upload multipart e download binário atravessam os routers (11.514ms)
+✔ middlewares preservam CORS, segurança, HEAD e 404 (14.527ms)
+✔ middleware Express traduz erros de domínio pelo mesmo contrato (5.5241ms)
+{ event: 'request_failed', type: 'Error' }
+✔ erros de handlers chegam ao middleware sem expor detalhes internos (6.2195ms)
+✔ limita requisições por usuário, ação e janela de um minuto (7.0874ms)
+✔ períodos incluem os meses extremos e unem intervalos contidos ou adjacentes (5.1731ms)
+✔ legibilidade distingue texto curto, ausência de experiência e linhas longas (1.1404ms)
+✔ redistribui dimensões ausentes e explica cada contribuição (2.0001ms)
+✔ obrigatório pesa o dobro e pendência produz estimativa provisória (0.2451ms)
+✔ não evidenciado pontua zero sem afirmar ausência de competência (0.2104ms)
+✔ períodos simultâneos não são contados duas vezes (0.7656ms)
+✔ evidência inventada vira informação a confirmar (0.6376ms)
+✔ requisito inventado e duplicação literal são rejeitados (0.3185ms)
+✔ saída arbitrária de IA não passa pelo esquema (6.8677ms)
+✔ tempo exigido não ganha pontos sem confirmação de períodos relevantes (0.4666ms)
+✔ rejeita cálculo sem requisitos e mantém entrada intacta (1.5205ms)
+✔ evidências normalizadas mantêm correspondência sem modificar os requisitos (0.4573ms)
+✔ bloqueia redes privadas, metadados, loopback e IPv4 mapeado (3.601ms)
+✔ rejeita URLs com protocolo, porta e credenciais indevidos (0.4372ms)
+✔ importação bloqueia endereço local após resolução DNS (1.2332ms)
+✔ formato real deve coincidir com extensão e caminho é restrito (0.7507ms)
+✔ adaptação não pode adicionar, excluir nem duplicar blocos (0.343ms)
+✔ remove contatos antes de comparação (0.6866ms)
+✔ PDF e DOCX exportam texto real selecionável com acentos (811.9947ms)
+Worker iniciado.
+✔ runs maintenance while idle and disconnects after graceful shutdown (5.7487ms)
+ℹ tests 63
+ℹ suites 0
+ℹ pass 63
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2459.2168

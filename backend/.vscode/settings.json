@@ -1,0 +1,15 @@
+{
+  "files.autoSave": "onFocusChange",
+  "biome.enabled": true,
+  "biome.requireConfiguration": true,
+  "[typescript][javascript][json][jsonc]": {
+    "editor.defaultFormatter": "biomejs.biome",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.biome": "always",
+      "source.organizeImports.biome": "always"
+    }
+  },
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "javascript.preferences.importModuleSpecifier": "non-relative"
+}

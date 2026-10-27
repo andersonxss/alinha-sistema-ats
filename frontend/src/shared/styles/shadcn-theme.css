@@ -1,0 +1,57 @@
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "DM Sans", Arial, sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  :root {
+    --background: #f7f8f4;
+    --foreground: #213d36;
+    --card: #ffffff;
+    --card-foreground: #213d36;
+    --popover: #ffffff;
+    --popover-foreground: #213d36;
+    --primary: #285c46;
+    --primary-foreground: #ffffff;
+    --secondary: #eef2e9;
+    --secondary-foreground: #213d36;
+    --muted: #eef2e9;
+    --muted-foreground: #5c6c63;
+    --accent: #d8e99b;
+    --accent-foreground: #213d36;
+    --destructive: #b42318;
+    --destructive-foreground: #ffffff;
+    --border: #e5e9e3;
+    --input: #becbbf;
+    --ring: #285c46;
+    --warning: #fcf1d7;
+    --warning-foreground: #70530e;
+    --radius: 0.5625rem;
+  }
+}

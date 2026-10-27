@@ -1,0 +1,12 @@
+
+> sistema-ats@0.1.0 typecheck
+> npm run typecheck --workspace @sistema-ats/backend && npm run typecheck --workspace @sistema-ats/frontend
+
+
+> typecheck
+> tsc --noEmit
+
+
+> typecheck
+> tsc --noEmit -p tsconfig.test.json
+

@@ -1,0 +1,81 @@
+# Use with: docker compose -f compose.yaml -f compose.dev.yaml up --build --watch
+x-backend-watch: &backend-watch
+  watch:
+    - action: sync+restart
+      path: ./backend
+      target: /app/backend
+      initial_sync: true
+      ignore:
+        - node_modules/
+        - src/generated/
+        - package.json
+        - prisma/
+        - prisma.config.ts
+        - coverage/
+        - "*.tsbuildinfo"
+    - action: rebuild
+      path: ./backend/prisma
+    - action: rebuild
+      path: ./backend/prisma.config.ts
+    - action: rebuild
+      path: ./package.json
+    - action: rebuild
+      path: ./package-lock.json
+    - action: rebuild
+      path: ./frontend/package.json
+    - action: rebuild
+      path: ./backend/package.json
+    - action: rebuild
+      path: ./Dockerfile
+    - action: rebuild
+      path: ./.dockerignore
+
+services:
+  app:
+    build:
+      target: development
+    command: ["npm", "run", "dev"]
+    environment:
+      NODE_ENV: development
+    develop:
+      watch:
+        - action: sync
+          path: ./frontend
+          target: /app/frontend
+          initial_sync: true
+          ignore:
+            - node_modules/
+            - .next/
+            - package.json
+            - coverage/
+            - "*.tsbuildinfo"
+        - action: rebuild
+          path: ./package.json
+        - action: rebuild
+          path: ./package-lock.json
+        - action: rebuild
+          path: ./frontend/package.json
+        - action: rebuild
+          path: ./backend/package.json
+        - action: rebuild
+          path: ./Dockerfile
+        - action: rebuild
+          path: ./.dockerignore
+
+  api:
+    build:
+      target: development
+    environment:
+      NODE_ENV: development
+    develop: *backend-watch
+
+  worker:
+    build:
+      target: development
+    environment:
+      NODE_ENV: development
+    develop: *backend-watch
+
+  migrate:
+    build:
+      target: development

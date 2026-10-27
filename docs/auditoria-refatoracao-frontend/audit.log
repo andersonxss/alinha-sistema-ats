@@ -1,0 +1,5 @@
+AVISO verificação não olha nenhum arquivo (GLOB_SEM_ARQUIVOS) P-002: o glob `src/**/*.js` não casa nenhum arquivo — verificação inerte (typo no glob?) .spec\constituicao.md:27
+
+resumo: 0 feature(s) · 0 história(s) de usuário · 0 critério(s) de aceite · 0/0 com teste · 0/0 provados
+✔ auditoria limpa (1 aviso(s))
+1 sinal(is) registrados no histórico — depois de corrigir: onp-spec licoes sugerir

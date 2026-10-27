@@ -1,0 +1,218 @@
+{
+  "node_count": 2140,
+  "unverified_node_count": 0,
+  "raw_edge_count": 5765,
+  "non_object_edges": 0,
+  "missing_endpoint_edges": 0,
+  "dangling_endpoint_edges": 21,
+  "external_reference_edges": 115,
+  "self_loop_edges": 21,
+  "valid_candidate_edges": 5629,
+  "exact_duplicate_edges": 0,
+  "directed_unique_endpoint_pairs": 5489,
+  "directed_same_endpoint_collapsed_edges": 140,
+  "undirected_unique_endpoint_pairs": 5479,
+  "undirected_same_endpoint_collapsed_edges": 150,
+  "same_endpoint_group_count": 130,
+  "relation_variant_groups": 115,
+  "source_file_variant_groups": 0,
+  "source_location_variant_groups": 17,
+  "context_variant_groups": 0,
+  "post_build_graph_type": "Graph",
+  "post_build_node_count": 2170,
+  "post_build_edge_count": 5614,
+  "post_build_error": "",
+  "producer_suppression": {
+    "path": "C:\\Users\\Anderson Souza\\AppData\\Local\\Temp\\ats-graphify-venv\\Lib\\site-packages\\graphify\\extract.py",
+    "total_sites": 12,
+    "sites": [
+      {
+        "line": 1813,
+        "name": "seen_ids",
+        "tuple_arity": 0,
+        "sample": "seen_ids = {n[\"id\"] for n in nodes}"
+      },
+      {
+        "line": 2377,
+        "name": "seen_ids",
+        "tuple_arity": 0,
+        "sample": "seen_ids = {n[\"id\"] for n in nodes}"
+      },
+      {
+        "line": 2379,
+        "name": "seen_doc_refs",
+        "tuple_arity": 0,
+        "sample": "seen_doc_refs: set[str] = set()"
+      },
+      {
+        "line": 3046,
+        "name": "seen_ids",
+        "tuple_arity": 0,
+        "sample": "seen_ids: set[str] = {n[\"id\"] for n in nodes}"
+      },
+      {
+        "line": 3193,
+        "name": "seen_ids",
+        "tuple_arity": 0,
+        "sample": "seen_ids = {n.get(\"id\") for n in nodes}"
+      },
+      {
+        "line": 4203,
+        "name": "seen_keys",
+        "tuple_arity": 0,
+        "sample": "seen_keys: set[tuple] = set()"
+      },
+      {
+        "line": 4389,
+        "name": "seen_keys",
+        "tuple_arity": 0,
+        "sample": "seen_keys: set[tuple] = set()"
+      },
+      {
+        "line": 7641,
+        "name": "seen_ids",
+        "tuple_arity": 0,
+        "sample": "seen_ids: set[str] = set()"
+      },
+      {
+        "line": 7749,
+        "name": "seen_ids",
+        "tuple_arity": 0,
+        "sample": "seen_ids: set[str] = set()"
+      },
+      {
+        "line": 7828,
+        "name": "seen_ids",
+        "tuple_arity": 0,
+        "sample": "seen_ids: set[str] = set()"
+      },
+      {
+        "line": 8343,
+        "name": "seen_ids",
+        "tuple_arity": 0,
+        "sample": "seen_ids: set[str] = set()"
+      },
+      {
+        "line": 8344,
+        "name": "seen_edges",
+        "tuple_arity": 4,
+        "sample": "seen_edges: set[tuple[str, str, str, str | None]] = set()"
+      }
+    ],
+    "error": ""
+  },
+  "examples": [
+    {
+      "source": "backend_tests_tests_authenticate_user_test",
+      "target": "backend_tests_tests_authenticate_user_test_finduser",
+      "edge_count": 7,
+      "relations": [
+        "calls",
+        "contains"
+      ],
+      "source_files": [
+        "backend/tests/tests/authenticate-user.test.ts"
+      ],
+      "source_locations": [
+        "L107",
+        "L149",
+        "L173",
+        "L24",
+        "L34",
+        "L55",
+        "L89"
+      ],
+      "contexts": [
+        "",
+        "call"
+      ]
+    },
+    {
+      "source": "agents_skills_impeccable_scripts_live_browser_sendevent",
+      "target": "agents_skills_impeccable_scripts_live_browser_sendevent_handlefailure",
+      "edge_count": 3,
+      "relations": [
+        "calls",
+        "contains",
+        "indirect_call"
+      ],
+      "source_files": [
+        ".agents/skills/impeccable/scripts/live-browser.js"
+      ],
+      "source_locations": [
+        "L7804",
+        "L7841",
+        "L7842"
+      ],
+      "contexts": [
+        "",
+        "argument",
+        "call"
+      ]
+    },
+    {
+      "source": "agents_skills_impeccable_scripts_live_browser",
+      "target": "agents_skills_impeccable_scripts_live_browser_init",
+      "edge_count": 3,
+      "relations": [
+        "calls",
+        "contains",
+        "indirect_call"
+      ],
+      "source_files": [
+        ".agents/skills/impeccable/scripts/live-browser.js"
+      ],
+      "source_locations": [
+        "L13477",
+        "L13528",
+        "L13530"
+      ],
+      "contexts": [
+        "",
+        "argument",
+        "call"
+      ]
+    },
+    {
+      "source": "agents_skills_impeccable_scripts_modern_screenshot_umd",
+      "target": "agents_skills_impeccable_scripts_modern_screenshot_umd_q",
+      "edge_count": 3,
+      "relations": [
+        "calls",
+        "contains"
+      ],
+      "source_files": [
+        ".agents/skills/impeccable/scripts/modern-screenshot.umd.js"
+      ],
+      "source_locations": [
+        "L1",
+        "L14"
+      ],
+      "contexts": [
+        "",
+        "call"
+      ]
+    },
+    {
+      "source": "agents_skills_impeccable_scripts_modern_screenshot_umd_l",
+      "target": "agents_skills_impeccable_scripts_modern_screenshot_umd_l_l",
+      "edge_count": 3,
+      "relations": [
+        "calls",
+        "contains",
+        "indirect_call"
+      ],
+      "source_files": [
+        ".agents/skills/impeccable/scripts/modern-screenshot.umd.js"
+      ],
+      "source_locations": [
+        "L1"
+      ],
+      "contexts": [
+        "",
+        "argument",
+        "call"
+      ]
+    }
+  ]
+}

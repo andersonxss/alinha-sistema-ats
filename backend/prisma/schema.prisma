@@ -1,0 +1,195 @@
+generator client {
+  provider = "prisma-client"
+  output = "../src/generated/prisma"
+}
+datasource db {
+  provider = "postgresql"
+}
+model User {
+  id String @id
+  name String
+  email String @unique
+  emailVerified Boolean @default(false)
+  image String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  sessions Session[]
+  accounts Account[]
+  resumes Resume[]
+  vacancies Vacancy[]
+  analyses Analysis[]
+  tasks Task[]
+}
+model Session {
+  id String @id
+  expiresAt DateTime
+  token String @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  ipAddress String?
+  userAgent String?
+  userId String
+  user User @relation(fields:[userId], references:[id], onDelete:Cascade)
+  @@index([userId])
+}
+model Account {
+  id String @id
+  accountId String
+  providerId String
+  userId String
+  user User @relation(fields:[userId], references:[id], onDelete:Cascade)
+  accessToken String?
+  refreshToken String?
+  idToken String?
+  accessTokenExpiresAt DateTime?
+  refreshTokenExpiresAt DateTime?
+  scope String?
+  password String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([userId])
+}
+model Verification {
+  id String @id
+  identifier String
+  value String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([identifier])
+}
+model RateLimit {
+  id String @id @default(cuid())
+  key String @unique
+  count Int
+  lastRequest BigInt
+}
+model Resume {
+  id String @id @default(cuid())
+  userId String
+  user User @relation(fields:[userId],references:[id],onDelete:Cascade)
+  name String
+  fileKey String?
+  extractedText String
+  reviewedText String
+  sections Json
+  extractionWarning String?
+  createdAt DateTime @default(now())
+  versions ResumeVersion[]
+  analyses Analysis[]
+  @@index([userId,createdAt])
+}
+model Vacancy {
+  id String @id @default(cuid())
+  userId String
+  user User @relation(fields:[userId],references:[id],onDelete:Cascade)
+  title String
+  company String
+  description String
+  sourceUrl String?
+  createdAt DateTime @default(now())
+  analyses Analysis[]
+  @@index([userId])
+}
+model Analysis {
+  id String @id @default(cuid())
+  userId String
+  user User @relation(fields:[userId],references:[id],onDelete:Cascade)
+  resumeId String
+  resume Resume @relation(fields:[resumeId],references:[id],onDelete:Cascade)
+  vacancyId String
+  vacancy Vacancy @relation(fields:[vacancyId],references:[id],onDelete:Cascade)
+  resumeSnapshot String
+  vacancySnapshot String
+  status String @default("pending")
+  result Json?
+  score Int?
+  rulesVersion String @default("1.0.0")
+  promptVersion String @default("1.0.0")
+  model String
+  error String?
+  createdAt DateTime @default(now())
+  requirements Requirement[]
+  versions ResumeVersion[]
+  tasks Task[]
+  @@index([userId,createdAt])
+}
+model Requirement {
+  id String @id @default(cuid())
+  analysisId String
+  analysis Analysis @relation(fields:[analysisId],references:[id],onDelete:Cascade)
+  description String
+  dimension String
+  mandatory Boolean
+  source String
+  evaluation Evaluation?
+}
+model Evaluation {
+  id String @id @default(cuid())
+  requirementId String @unique
+  requirement Requirement @relation(fields:[requirementId],references:[id],onDelete:Cascade)
+  classification String
+  evidence String?
+  explanation String
+  contribution Float
+}
+model ResumeVersion {
+  id String @id @default(cuid())
+  resumeId String
+  resume Resume @relation(fields:[resumeId],references:[id],onDelete:Cascade)
+  analysisId String
+  analysis Analysis @relation(fields:[analysisId],references:[id],onDelete:Cascade)
+  originalText String
+  proposedText String
+  approvedText String?
+  revision Int @default(0)
+  createdAt DateTime @default(now())
+  suggestions Suggestion[]
+  exports Export[]
+  tasks Task[]
+  @@index([analysisId])
+}
+model Suggestion {
+  id String @id @default(cuid())
+  versionId String
+  version ResumeVersion @relation(fields:[versionId],references:[id],onDelete:Cascade)
+  original String
+  replacement String
+  justification String
+  accepted Boolean @default(false)
+}
+model Export {
+  id String @id @default(cuid())
+  versionId String
+  version ResumeVersion @relation(fields:[versionId],references:[id],onDelete:Cascade)
+  format String
+  fileKey String
+  revision Int
+  createdAt DateTime @default(now())
+}
+model Task {
+  id String @id @default(cuid())
+  userId String
+  user User @relation(fields:[userId],references:[id],onDelete:Cascade)
+  analysisId String?
+  analysis Analysis? @relation(fields:[analysisId],references:[id],onDelete:Cascade)
+  versionId String?
+  version ResumeVersion? @relation(fields:[versionId],references:[id],onDelete:Cascade)
+  kind String
+  status String @default("pending")
+  stage String @default("queued")
+  attempts Int @default(0)
+  availableAt DateTime @default(now())
+  lockedAt DateTime?
+  lockToken String?
+  error String?
+  payload Json?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([status,availableAt])
+  @@index([userId])
+}
+model FileGarbage {
+  key String @id
+  createdAt DateTime @default(now())
+}

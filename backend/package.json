@@ -1,0 +1,48 @@
+{
+  "name": "@sistema-ats/backend",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/bootstrap.ts",
+    "build": "prisma generate && tsc --noEmit",
+    "start": "tsx src/bootstrap.ts",
+    "worker": "tsx src/worker-bootstrap.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/tests/*.test.ts",
+    "test:integration": "tsx tests/tests/integration.ts",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate deploy",
+    "db:migrate:dev": "prisma migrate dev",
+    "format": "biome format --write .",
+    "format:check": "biome format .",
+    "lint": "biome lint . --error-on-warnings",
+    "lint:fix": "biome lint --write . --error-on-warnings",
+    "check": "biome check . --error-on-warnings",
+    "check:fix": "biome check --write . --error-on-warnings",
+    "ci:check": "biome ci . --error-on-warnings"
+  },
+  "dependencies": {
+    "@google/genai": "2.30.0",
+    "@prisma/adapter-pg": "7.10.0",
+    "@prisma/client": "7.10.0",
+    "better-auth": "1.7.10",
+    "cheerio": "1.2.0",
+    "docx": "9.11.0",
+    "dotenv": "18.0.8",
+    "express": "5.2.0",
+    "ipaddr.js": "2.5.0",
+    "mammoth": "1.13.0",
+    "pdf-parse": "2.4.5",
+    "pdfkit": "0.20.2",
+    "pg": "8.23.1",
+    "tsx": "4.23.15",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.15",
+    "@types/express": "5.0.6",
+    "@types/node": "24.19.2",
+    "@types/pdfkit": "0.17.6",
+    "@types/pg": "8.23.1"
+  }
+}

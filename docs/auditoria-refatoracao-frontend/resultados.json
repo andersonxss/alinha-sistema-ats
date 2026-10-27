@@ -1,0 +1,50 @@
+[
+  {
+    "name": "tipos",
+    "command": "npm.cmd run typecheck",
+    "startedAt": "2026-10-17T20:01:26.864Z",
+    "finishedAt": "2026-10-17T20:01:32.475Z",
+    "exitCode": 0,
+    "error": null
+  },
+  {
+    "name": "backend",
+    "command": "npm.cmd run test:backend",
+    "startedAt": "2026-10-17T20:01:32.477Z",
+    "finishedAt": "2026-10-17T20:01:35.789Z",
+    "exitCode": 0,
+    "error": null
+  },
+  {
+    "name": "frontend",
+    "command": "npm.cmd run test:frontend",
+    "startedAt": "2026-10-17T20:01:35.791Z",
+    "finishedAt": "2026-10-17T20:01:39.359Z",
+    "exitCode": 0,
+    "error": null
+  },
+  {
+    "name": "build",
+    "command": "npm.cmd run build --workspace @sistema-ats/frontend",
+    "startedAt": "2026-10-17T20:01:39.359Z",
+    "finishedAt": "2026-10-17T20:01:45.050Z",
+    "exitCode": 0,
+    "error": null
+  },
+  {
+    "name": "verify",
+    "command": "node .agents/skills/onp-spec-driven/scripts/onp-spec.mjs verify refatoracao-frontend",
+    "startedAt": "2026-10-17T20:01:45.051Z",
+    "finishedAt": "2026-10-17T20:01:45.164Z",
+    "exitCode": 2,
+    "error": null
+  },
+  {
+    "name": "audit",
+    "command": "node .agents/skills/onp-spec-driven/scripts/onp-spec.mjs audit --ci",
+    "startedAt": "2026-10-17T20:01:45.165Z",
+    "finishedAt": "2026-10-17T20:01:45.305Z",
+    "exitCode": 0,
+    "error": null
+  }
+]

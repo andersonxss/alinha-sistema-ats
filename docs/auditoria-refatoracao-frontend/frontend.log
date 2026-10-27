@@ -1,0 +1,17 @@
+
+> sistema-ats@0.1.0 test:frontend
+> npm test --workspace @sistema-ats/frontend
+
+
+> test
+> vitest run
+
+
+ RUN  v5.0.5 C:/dev/sistema-ats/frontend
+
+
+ Test Files  5 passed (5)
+      Tests  21 passed (21)
+   Start at  17:01:36
+   Duration  2.51s (environment 55%, import 19%, tests 13%, setup 8%, transform 4%)
+

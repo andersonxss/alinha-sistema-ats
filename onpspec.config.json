@@ -1,0 +1,36 @@
+{
+  "testCommand": "node scripts/spec-tests.mjs",
+  "reporter": "tap",
+  "testGlobs": [
+    "backend/tests/tests/*.test.ts",
+    "test/**",
+    "tests/**",
+    "frontend/tests/**",
+    "src/**/*.test.*",
+    "src/**/*.spec.*",
+    "frontend/src/**/*.test.*",
+    "frontend/src/**/*.spec.*",
+    "__tests__/**"
+  ],
+  "srcGlobs": [
+    "backend/src/infrastructure/ai/client.ts",
+    "backend/src/infrastructure/ai/config.ts",
+    "backend/src/modules/analysis/presentation/http/analysis.route.ts",
+    "backend/src/modules/dashboard/presentation/http/dashboard.route.ts",
+    "scripts/spec-tests.mjs",
+    "src/**",
+    "frontend/src/features/auth/model/schemas.ts",
+    "frontend/src/features/auth/hooks/use-auth-form.ts",
+    "frontend/src/features/account/model/schemas.ts",
+    "frontend/src/features/account/ui/AccountSettings.tsx",
+    "frontend/src/features/resumes/model/schemas.ts",
+    "frontend/src/features/resumes/hooks/use-resume-input.ts",
+    "frontend/src/features/resumes/ui/ResumeInput.tsx",
+    "frontend/src/features/versions/model/schemas.ts",
+    "frontend/src/features/versions/hooks/use-version-editor.ts",
+    "frontend/src/features/versions/ui/VersionEditor.tsx",
+    "frontend/src/features/analysis/model/schemas.ts",
+    "frontend/src/features/analysis/hooks/use-new-analysis.ts",
+    "frontend/src/features/analysis/ui/NewAnalysisForm.tsx"
+  ]
+}

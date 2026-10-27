@@ -1,0 +1,102 @@
+﻿Edição visual no navegador
+Controles da barra visual
+Captura de telas
+Documentos e armazenamento
+Variantes e parâmetros visuais
+Configuração da barra visual
+Arquitetura e contratos Alinha
+Dependências do frontend
+Chat e comandos visuais
+Composição e limites API
+Roteamento HTTP e adaptadores
+Migração Gemini e especificações
+Sessões e eventos visuais
+Formulários e acesso frontend
+Editor de design visual
+Recuperação de sessões visuais
+Captura e seleção visual
+Lições e configuração spec
+Eventos e registros spec
+Auditoria de especificações
+Dependências do backend
+Repositórios de currículos
+Adaptação de currículos
+Comandos de especificação
+Rotas de currículos
+Serviços de conta frontend
+Injeção de componentes Svelte
+Autenticação e sessões
+Schema e migrações iniciais
+Análises e erros domínio
+Planejamento de execução spec
+Dashboard e layout frontend
+Serviços de análise frontend
+Erros e gerenciamento conta
+Sessões e autorização usuário
+Execução da migração Gemini
+Execução das rotas frontend
+Formulários de novas análises
+Execução do release Docker
+Ferramentas de desenvolvimento backend
+Worker e manutenção
+Contratos de pontuação ATS
+Scripts de operação projeto
+Design frontend e acessibilidade
+Direção visual e plataformas
+Manipulação DOM visual
+Qualidade do código backend
+Aliases de componentes frontend
+Serviços de currículos frontend
+Configuração TypeScript frontend
+Persistência de sessão visual
+Listas e indicadores dashboard
+Anotações e pinos visuais
+Coordenação de alvos visuais
+Páginas e autenticação frontend
+Serviços de dashboard frontend
+Experiência e legibilidade ATS
+Componentes de diálogo
+Dependências do workspace
+Especificação das rotas frontend
+Configuração TypeScript backend
+Design e revisão API
+Verificação de qualidade visual
+Análise e evidências locais
+Cliente Gemini e respostas
+Documentação de design
+Verificação de critérios spec
+Importação URL e segurança
+Auditoria frontend automatizada
+Geração de testes spec
+Execução de testes spec
+Auditoria segurança e privacidade
+Especificação do release Docker
+Exclusões da edição visual
+Testes de documentação implantação
+Configuração Biome workspace
+Refatoração e testes pagamentos
+Instalação das ferramentas visuais
+Testes do cliente Gemini
+Serviços Docker produção
+Planejamento de funcionalidades
+Inicialização e configuração Prisma
+Reprodução da auditoria frontend
+Configuração TypeScript testes
+Auditoria técnica de interfaces
+Textos e resiliência interface
+Crítica e simplificação visual
+Tipos gerados Next
+Serviços Docker desenvolvimento
+Intensidade visual e escopo
+Estratégia de cores semânticas
+Aplicação atômica de edições
+Experiência e detalhes produto
+Extração de padrões reutilizáveis
+Lições apoiadas em evidências
+Interfaces para operação
+Aprimoramento técnico visual
+Seleção contextual de comandos
+Modelo de tarefas
+Migração progresso das análises
+Simulação de respostas Gemini
+Configuração PostCSS frontend
